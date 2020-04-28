@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/assignation")
-class AssignationController ()
+class AssignationController (private val assignationService: AssignationService)
 {
 
 }

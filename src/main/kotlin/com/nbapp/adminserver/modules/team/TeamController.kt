@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/team")
-class TeamController ()
+class TeamController (private val teamService: TeamService)
 {
 
 }

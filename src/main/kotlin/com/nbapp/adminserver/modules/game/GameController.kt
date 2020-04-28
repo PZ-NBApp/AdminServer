@@ -4,4 +4,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/game")
-class GameController ()
+class GameController (private val gameService: GameService)
+{
+
+}

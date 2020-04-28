@@ -1,6 +1,7 @@
 package com.nbapp.adminserver.modules.game
 
 import javax.persistence.*
+import com.nbapp.adminserver.modules.team.Team
 
 class Game(
         @Id
