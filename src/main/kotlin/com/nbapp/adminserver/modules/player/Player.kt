@@ -4,7 +4,7 @@ import javax.persistence.*
 
 class Player(
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val playerId: Int? =null,
 
     val firstName: String,
