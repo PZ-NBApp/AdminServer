@@ -9,8 +9,8 @@ class Assignation(
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val assignationId: Int? = null,
 
-        val playerId = Int,
+        val playerId: Int,
 
-        val clubId = Int
+        val clubId: Int
 
 )
