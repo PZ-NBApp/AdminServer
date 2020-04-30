@@ -6,7 +6,7 @@ import javax.persistence.*
 data class Player (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val playerId: Int? =null,
+    val playerId: Int? = null,
 
     val firstName: String,
 

@@ -8,7 +8,15 @@ class PlayerService(private val playerRepository: PlayerRepository) {
         return playerRepository.findAll()
     }
 
+    fun getPlayerById(id : Int): Player {
+        return playerRepository.getOne(id)
+    }
+
     fun addPlayer(player:Player): Player {
         return playerRepository.save(player)
+    }
+
+    fun deletePlayer(id : Int) {
+        return playerRepository.deleteById(id)
     }
 }
