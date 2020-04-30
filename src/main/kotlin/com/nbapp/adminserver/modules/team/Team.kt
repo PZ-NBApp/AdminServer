@@ -1,8 +1,9 @@
 package com.nbapp.adminserver.modules.team
 
-import jdk.jfr.Percentage
+//import jdk.jfr.Percentage
 import javax.persistence.*
 
+@Entity
 class Team(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +17,7 @@ class Team(
 
         val gamesWon: Int,
 
-        val gamesLost: Int,
+        val gamesLost: Int
 
-        val winPercentage: Percentage
+        //val winPercentage: Percentage
 )

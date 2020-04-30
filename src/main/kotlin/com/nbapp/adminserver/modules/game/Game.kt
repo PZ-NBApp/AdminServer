@@ -3,6 +3,7 @@ package com.nbapp.adminserver.modules.game
 import javax.persistence.*
 import com.nbapp.adminserver.modules.team.Team
 
+@Entity
 class Game(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)

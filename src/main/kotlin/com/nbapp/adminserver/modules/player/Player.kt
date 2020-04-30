@@ -2,7 +2,8 @@ package com.nbapp.adminserver.modules.player
 
 import javax.persistence.*
 
-class Player(
+@Entity
+data class Player (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val playerId: Int? =null,
