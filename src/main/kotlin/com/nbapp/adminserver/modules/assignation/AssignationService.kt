@@ -12,9 +12,8 @@ class AssignationService(private val assignationRepository: AssignationRepositor
     }
 
     //TODO
-    //lista wszystkich zawodników danego zespołu
     /*fun getAllTeamPlayers(idTeam:Int):Iterable<Player>{
-        return assignationRepository.findAllById(idTeam)
+        return assignationRepository.findAllByTeamTeamId(idTeam)
     }*/
 
     fun getAssignationById(id:Int):Assignation{
