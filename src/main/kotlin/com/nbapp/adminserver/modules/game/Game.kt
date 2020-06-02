@@ -13,7 +13,14 @@ class Game(
 
         val guestId: Int,
 
-        val hostResult: Int,
+        var hostResult: Int,
 
-        val guestResult: Int
-)
+        var guestResult: Int)
+    {
+        fun updateHostResult(newResult: Int){
+            hostResult = newResult
+            }
+        fun updateGuestResult(newResult: Int){
+            guestResult=newResult
+        }
+    }

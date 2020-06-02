@@ -12,6 +12,6 @@ class Assignation(
 
         val playerId: Int,
 
-        val clubId: Int
+        val teamId: Int
 
 )
