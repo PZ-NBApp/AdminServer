@@ -13,11 +13,20 @@ class Team(
 
         val city: String,
 
-        val gamesPlayed: Int,
+        var gamesPlayed: Int,
 
-        val gamesWon: Int,
+        var gamesWon: Int,
 
-        val gamesLost: Int
+        var gamesLost: Int
 
         //val winPercentage: Percentage
-)
+){
+        fun wonGame(){
+                gamesPlayed++
+                gamesWon++
+        }
+        fun lostGame(){
+                gamesPlayed++
+                gamesLost++
+        }
+}
