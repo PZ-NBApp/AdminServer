@@ -5,7 +5,7 @@ import com.nbapp.adminserver.modules.team.TeamRepository
 import org.springframework.stereotype.Service
 
 @Service
-class GameService(private val gameRepository: GameRepository) {
+class GameService(private val gameRepository: GameRepository, private val teamRepository:TeamRepository) {
     fun getGames():Iterable<Game>{
         return gameRepository.findAll()
     }
@@ -28,9 +28,6 @@ class GameService(private val gameRepository: GameRepository) {
         val game:Game=gameRepository.getOne(id)
         val hostId:Int=game.hostId
         val guestId:Int=game.guestId
-        //TODO
-        /*
-        val teamRepository:TeamRepository
         val host:Team= teamRepository.getOne(hostId)
         val guest:Team=teamRepository.getOne(guestId)
         game.updateHostResult(hostResult)
@@ -43,7 +40,7 @@ class GameService(private val gameRepository: GameRepository) {
         {
             host.lostGame()
             guest.lostGame()
-        }*/
+        }
         return gameRepository.save(game)
     }
 }
