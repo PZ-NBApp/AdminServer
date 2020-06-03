@@ -24,5 +24,6 @@ class TeamController (private val teamService: TeamService)
     @DeleteMapping("/delete/{id}")
     fun deleteTeam(@PathVariable id : Int) {
         return teamService.deleteTeam(id)
+
     }
 }
