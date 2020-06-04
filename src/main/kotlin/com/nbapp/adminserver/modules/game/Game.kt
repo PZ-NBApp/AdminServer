@@ -1,7 +1,6 @@
 package com.nbapp.adminserver.modules.game
 
 import javax.persistence.*
-import com.nbapp.adminserver.modules.team.Team
 
 @Entity
 class Game(
@@ -16,6 +15,8 @@ class Game(
         var hostResult: Int,
 
         var guestResult: Int)
+//TODO
+//check wo this functions just insert in service
     {
         fun updateHostResult(newResult: Int){
             hostResult = newResult
