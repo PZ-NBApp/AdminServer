@@ -8,10 +8,13 @@ import com.nbapp.adminserver.modules.team.Team
 class Assignation(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val assignationId: Int? = null,
+        val assignationId: Int,
 
-        val playerId: Int,
-
-        val teamId: Int
+        @OneToOne
+        @JoinColumn(name = "pId")
+        val player: Player,
+        @ManyToOne(fetch = FetchType.EAGER)
+        @JoinColumn(name="tId")
+        val team: Team
 
 )

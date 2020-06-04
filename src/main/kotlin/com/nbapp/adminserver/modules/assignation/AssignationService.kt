@@ -11,12 +11,11 @@ class AssignationService(private val assignationRepository: AssignationRepositor
     {
         return assignationRepository.findAll()
     }
-
-    //TODO
-    /*fun getAllTeamPlayers(idTeam:Int):Iterable<Player>{
-        return assignationRepository.findAllByTeamTeamId(idTeam)
-    }*/
-
+/*
+    fun getAllTeamPlayers(idTeam:Int):Iterable<Player>{
+        return assignationRepository.findAllByTeamId(idTeam)
+    }
+*/
     fun getAssignationById(id:Int):Assignation{
         return assignationRepository.getOne(id)
     }
@@ -31,7 +30,6 @@ class AssignationService(private val assignationRepository: AssignationRepositor
     @Transactional
     fun deleteAllTeamAssignation(teamId : Int)
     {
-
         return assignationRepository.deleteAssignationByTeamId(teamId)
     }
 }

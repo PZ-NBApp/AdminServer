@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface AssignationRepository: JpaRepository<Assignation, Int>{
-    //fun findAllByTeamTeamId(teamId:Int):List<Player>
+    //fun findAllByTeamtId(teamId:Int):List<Player>
     fun deleteAssignationByTeamId(teamId: Int)
 }
