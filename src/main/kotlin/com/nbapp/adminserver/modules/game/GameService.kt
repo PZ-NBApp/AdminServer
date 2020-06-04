@@ -22,7 +22,7 @@ class GameService(private val gameRepository: GameRepository, private val teamRe
         return gameRepository.deleteById(id)
     }
 
-        fun updateGame(id:Int, text:Map<String,Int>): Game {
+    fun updateGame(id:Int, text:Map<String,Int>) {
             val hostResult:Int=text.getValue("hostResult").toInt()
             val guestResult:Int=text.getValue("guestResult").toInt()
             val game:Game=gameRepository.getOne(id)
@@ -42,6 +42,6 @@ class GameService(private val gameRepository: GameRepository, private val teamRe
                 host.lostGame()
                 guest.wonGame()
             }
-            return gameRepository.save(game)
-        }
+            gameRepository.save(game)
     }
+}
