@@ -23,6 +23,6 @@ class TeamService(private val teamRepository: TeamRepository) {
     }
 
     fun getStandings():Iterable<Team>{
-        return teamRepository.findAll().sortedByDescending {  }
+        return teamRepository.findAll().sortedByDescending {it.winPercentage}
     }
 }
