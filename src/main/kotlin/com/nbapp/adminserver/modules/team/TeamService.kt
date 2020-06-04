@@ -21,4 +21,8 @@ class TeamService(private val teamRepository: TeamRepository) {
     fun deleteTeam(id : Int) {
         return teamRepository.deleteById(id)
     }
+
+    fun getStandings():Iterable<Team>{
+        return teamRepository.findAll().sortedByDescending {  }
+    }
 }

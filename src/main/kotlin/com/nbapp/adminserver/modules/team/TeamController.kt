@@ -26,4 +26,9 @@ class TeamController (private val teamService: TeamService)
         return teamService.deleteTeam(id)
 
     }
+
+    @GetMapping("/standings")
+    fun getStandings():Iterable<Team>{
+        return teamService.getStandings()
+    }
 }
