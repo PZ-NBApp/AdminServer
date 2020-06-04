@@ -26,7 +26,11 @@ class AssignationController (private val assignationService: AssignationService)
     fun deleteAssignation(@PathVariable id : Int) {
         assignationService.deleteAssignation(id)
     }
-
+    @org.springframework.transaction.annotation.Transactional
+    @DeleteMapping("/deleteTeams/{id}")
+    fun deleteAssignationByTeamId(@PathVariable id : Int){
+        assignationService.deleteAllTeamAssignation(id)
+    }
     //TODO
     /*@GetMapping("/team/id")
     fun getTeamAllPlayers(@PathVariable idTeam:Int){
