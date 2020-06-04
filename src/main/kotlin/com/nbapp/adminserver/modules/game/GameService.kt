@@ -35,11 +35,12 @@ class GameService(private val gameRepository: GameRepository, private val teamRe
         if (hostResult>guestResult){
             host.wonGame()
             guest.lostGame()
+
         }
         else
         {
             host.lostGame()
-            guest.lostGame()
+            guest.wonGame()
         }
         return gameRepository.save(game)
     }
