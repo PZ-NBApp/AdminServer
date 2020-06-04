@@ -1,6 +1,5 @@
 package com.nbapp.adminserver.modules.team
 
-//import jdk.jfr.Percentage
 import javax.persistence.*
 
 @Entity
