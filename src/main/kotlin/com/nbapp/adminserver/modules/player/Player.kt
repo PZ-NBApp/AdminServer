@@ -4,10 +4,7 @@ import javax.persistence.*
 
 @Entity
 data class Player (
-
-
         var firstName: String,
-
         var surname: String
 )
 {

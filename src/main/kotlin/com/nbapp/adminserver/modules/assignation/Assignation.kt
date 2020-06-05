@@ -6,8 +6,6 @@ import com.nbapp.adminserver.modules.team.Team
 
 @Entity
 data class Assignation(
-
-
         @ManyToOne(fetch = FetchType.EAGER)
         @JoinColumn(name = "playerId")
         var player : Player,

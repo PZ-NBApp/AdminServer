@@ -4,8 +4,6 @@ import javax.persistence.*
 
 @Entity
 data class Team(
-
-
         val name: String,
 
         val city: String,

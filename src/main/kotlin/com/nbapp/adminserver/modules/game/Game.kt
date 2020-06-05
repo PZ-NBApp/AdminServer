@@ -4,8 +4,6 @@ import javax.persistence.*
 
 @Entity
 class Game(
-
-
         val hostId: Int,
 
         val guestId: Int,
