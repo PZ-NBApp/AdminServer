@@ -19,7 +19,7 @@ data class Team(
 {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val teamId: Int? = null
+        val teamId: Int = 0
         fun wonGame(){
                 winPercentage = 0.0F
                 gamesPlayed++

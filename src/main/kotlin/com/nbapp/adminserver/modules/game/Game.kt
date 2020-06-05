@@ -5,11 +5,8 @@ import javax.persistence.*
 @Entity
 class Game(
         val hostId: Int,
-
         val guestId: Int,
-
         var hostResult: Int,
-
         var guestResult: Int)
 //TODO
 //check wo this functions just insert in service
