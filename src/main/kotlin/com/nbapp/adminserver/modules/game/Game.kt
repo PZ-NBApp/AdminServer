@@ -4,9 +4,7 @@ import javax.persistence.*
 
 @Entity
 class Game(
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val gameId: Int? = null,
+
 
         val hostId: Int,
 
@@ -18,6 +16,9 @@ class Game(
 //TODO
 //check wo this functions just insert in service
     {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        val gameId: Int? = null
         fun updateHostResult(newResult: Int){
             hostResult = newResult
             }

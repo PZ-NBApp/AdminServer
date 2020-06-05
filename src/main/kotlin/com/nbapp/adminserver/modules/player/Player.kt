@@ -4,11 +4,14 @@ import javax.persistence.*
 
 @Entity
 data class Player (
+
+
+        var firstName: String,
+
+        var surname: String
+)
+{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val playerId: Int? = null,
-
-    val firstName: String,
-
-    val surname: String
-)
+    val playerId: Int = 0
+}
