@@ -3,11 +3,7 @@ package com.nbapp.adminserver.modules.team
 import javax.persistence.*
 
 @Entity
-class Team(
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val teamId: Int? = null,
-
+data class Team(
         val name: String,
 
         val city: String,
@@ -19,7 +15,11 @@ class Team(
         var gamesLost: Int,
 
         var winPercentage: Float
-){
+)
+{
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        val teamId: Int = 0
         fun wonGame(){
                 winPercentage = 0.0F
                 gamesPlayed++

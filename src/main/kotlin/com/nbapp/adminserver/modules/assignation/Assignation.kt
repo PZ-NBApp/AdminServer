@@ -5,16 +5,15 @@ import com.nbapp.adminserver.modules.player.Player
 import com.nbapp.adminserver.modules.team.Team
 
 @Entity
-class Assignation(
+data class Assignation(
+        @ManyToOne(fetch = FetchType.EAGER)
+        @JoinColumn(name = "playerId")
+        var player : Player,
+        @ManyToOne(fetch = FetchType.EAGER)
+        @JoinColumn(name = "teamId")
+        var team : Team )
+{
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val assignationId: Int,
-
-        @OneToOne
-        @JoinColumn(name = "pId")
-        val player: Player,
-        @ManyToOne(fetch = FetchType.EAGER)
-        @JoinColumn(name="tId")
-        val team: Team
-
-)
+        val assignationId: Int = 0
+}
