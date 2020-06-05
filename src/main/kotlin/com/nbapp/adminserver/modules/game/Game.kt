@@ -3,7 +3,7 @@ package com.nbapp.adminserver.modules.game
 import javax.persistence.*
 
 @Entity
-class Game(
+data class Game(
         val hostId: Int,
         val guestId: Int,
         var hostResult: Int,
@@ -13,7 +13,7 @@ class Game(
     {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val gameId: Int? = null
+        val gameId: Int = 0
         fun updateHostResult(newResult: Int){
             hostResult = newResult
             }
