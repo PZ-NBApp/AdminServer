@@ -4,12 +4,13 @@ import javax.persistence.*
 
 @Entity
 data class Game(
+        //TODO
+        // change hostId from int to host:Team
         val hostId: Int,
         val guestId: Int,
         var hostResult: Int,
         var guestResult: Int)
-//TODO
-//check wo this functions just insert in service
+
     {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
