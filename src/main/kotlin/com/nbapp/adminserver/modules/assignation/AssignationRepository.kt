@@ -9,5 +9,6 @@ interface AssignationRepository: JpaRepository<Assignation, Int>{
 
     fun deleteAssignationByTeamTeamId(teamId: Int)
     fun findAssignationsByTeamTeamId(teamId: Int) : Iterable<Assignation>
+
 }
 

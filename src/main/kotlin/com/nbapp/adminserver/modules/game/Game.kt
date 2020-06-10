@@ -1,13 +1,16 @@
 package com.nbapp.adminserver.modules.game
-
+import com.nbapp.adminserver.modules.player.Player
+import com.nbapp.adminserver.modules.team.Team
 import javax.persistence.*
 
 @Entity
 data class Game(
-        //TODO
-        // change hostId from int to host:Team
-        val hostId: Int,
-        val guestId: Int,
+        @ManyToOne(fetch = FetchType.EAGER)
+        @JoinColumn(name = "hostId")
+        var host : Team,
+        @ManyToOne(fetch = FetchType.EAGER)
+        @JoinColumn(name = "guestId")
+        var guest : Team,
         var hostResult: Int,
         var guestResult: Int)
 

@@ -18,8 +18,8 @@ class GameController (private val gameService: GameService)
     }
 
     @PostMapping("/add")
-    fun addGame(@RequestBody newGame: Game) {
-        gameService.addGame(newGame)
+    fun addGame(@RequestBody newGame : Map<String,String>) {
+       return gameService.addGame(newGame)
     }
 
     @DeleteMapping("/delete/{id}")
